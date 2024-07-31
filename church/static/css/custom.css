@@ -1,0 +1,38 @@
+/* Custom Styles for Blue Header */
+.navbar {
+    background-color: #007BFF; /* Blue color */
+    padding: 1rem;
+}
+
+.nav-link, .navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    color: #FFD700 !important; /* Gold color on hover */
+}
+
+.custom-btn.btn.custom-link {
+    background-color: #FFD700; /* Gold button */
+    color: #007BFF;
+}
+
+.custom-btn.btn.custom-link:hover {
+    background-color: #FFC107; /* Darker gold on hover */
+    color: #0056b3;
+}
+
+/* Custom footer styling */
+.site-footer {
+    background-color: #007BFF;
+    color: white;
+}
+
+.copyright-text, .social-icon-link {
+    color: white;
+}
+
+.social-icon-link:hover {
+    color: #FFD700;
+}

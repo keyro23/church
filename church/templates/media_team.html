@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heaven Today Media</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar-custom {
+            background-color: #f6f9fb; /* Custom background color */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #d38d3c; /* Text color for the brand and links */
+        }
+        .navbar-custom .nav-link:hover {
+            color: #ffc107; /* Hover color for the links */
+        }
+        .hero {
+            background-image: url('{% static "images/hero_image.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            color: rgba(253, 250, 250, 0.928);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: orange; /* Change heading color to orange */
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .card {
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            border-bottom: 1px solid #2d2b2b;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-body h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .booking-section {
+            background: linear-gradient(135deg, #e2e6ea, #f8f9fa);
+            border-radius: 10px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .booking-section h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .booking-section form .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        .contact-info {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .navbar-brand img {
+            height: 50px; /* Set the logo size */
+            width: auto;
+        }
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxsaW5lIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0ibm9uZSIvPjwvc3ZnPg==');
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg navbar-custom">
+        <div class="container">
+            <a href="{% url 'home' %}" class="navbar-brand">
+                <img src="{% static 'images/services/media.png' %}" alt="Logo">
+            </a>
+            <a href="{% url 'home' %}" class="navbar-brand">
+                <span class="text-danger"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'home' %}"><strong class="text-warning">Home</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'images/stream.png' %}" alt="Live Streaming" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Live Streaming</h5>
+                        <p>Broadcast your events live to your audience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'images/wedding.png' %}" alt="Video Production" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Weddings</h5>
+                        <p>Capture your happiest  moments with Us..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'images/graduation.png' %}" alt="Audio Recording" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Graduations</h5>
+                        <p>As you register a new achievement, let's make it memorable for you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'images/commercial.png' %}" alt="Graphic Design" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Commercials</h5>
+                        <p>Let's take your business to the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Commercial Video Showcase Section -->
+<div class="container mt-5">
+    <div class="card mt-4">
+        <div class="card-header text-center">
+            <h2></h2>
+        </div>
+        <div class="card-body">
+            {% for video in video %}
+                <div class="embed-responsive embed-responsive-16by9 mb-4">
+                    <video controls class="embed-responsive-item">
+                        <source src="{{ video.video_file.url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>{{ video.title }}: {{ video.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+        <!-- Booking Section -->
+<div class="card booking-section">
+    <div class="card-header text-center">
+        <h2>Book Our Services</h2>
+    </div>
+    <div class="card-body">
+        <p>To book our media team for your event, please fill out the form below:</p>
+
+        <!-- Display success messages -->
+        {% if messages %}
+            <div class="alert alert-success">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="POST" action="{% url 'media_team' %}">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Service</label>
+                <select class="form-control" id="service" name="service">
+                    <option>Live Streaming</option>
+                    <option>Conference</option>
+                    <option>Weddings</option>
+                    <option>Graduations</option>
+                    <option>Burials</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+        <!-- Contact Information Section -->
+        <div class="card contact-info mt-5">
+            <div class="card-header text-center">
+                <h2>Contact Information</h2>
+            </div>
+            <div class="card-body text-center" id="contact">
+                <p><i class="fas fa-envelope"></i><strong>Email:</strong> <a href="mailto:media@yourchurch.com">heaventodaytv@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i><strong>Phone:</strong> +254 708 668 146</p>
+                <p><i class="fas fa-map-marker-alt"></i><strong>Address:</strong> QWF7+36W, Kasarani Mwiki Rd, Nairobi</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Your Church. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome -->
+</body>
+</html>
